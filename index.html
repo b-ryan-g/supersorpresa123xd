@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffccd5;
+            color: #b91c1c;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #ff577f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+        <h1>¿Quieres ser mi Valentín?</h1>
+        <img src="images/valentinesdaycat.jpg" alt="A cute image" width="300">
+        <br>
+        <button onclick="yes()">Yes</button>
+        <button onclick="no()">No</button>
+    </div>
+    
+    <div class="container" id="yesPage" style="display: none;">
+        <h1>Yayyy tqm Celeste &lt;3</h1>
+        <img src="images/catcouple.jpg" alt="Happy image" width="300">
+    </div>
+
+    <div class="container" id="noPage" style="display: none;">
+        <h1>Por que no D: ??????</h1>
+        <img src="images/sadcat1.jpg" alt="Sad image" width="300">
+        <br>
+        <button onclick="why()">Why?</button>
+    </div>
+    
+    <div class="container" id="whyPage" style="display: none;">
+        <h1>Please?</h1>
+        <br>
+        <button onclick="areYouSure()">Are you sure?</button>
+    </div>
+    
+    <script>
+        function yes() {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("yesPage").style.display = "block";
+        }
+        function no() {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("noPage").style.display = "block";
+        }
+        function why() {
+            document.getElementById("noPage").style.display = "none";
+            document.getElementById("whyPage").style.display = "block";
+        }
+        function areYouSure() {
+            document.getElementById("whyPage").style.display = "none";
+            document.getElementById("main").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -31,10 +31,10 @@
 </head>
 <body>
     <div class="container" id="main">
-        <h1>¿Quieres ser mi Valentín?</h1>
+        <h1>¿Quieres ser mi San Valentín para el 14?</h1>
         <img src="images/valentinesdaycat.jpg" alt="A cute image" width="300">
         <br>
-        <button onclick="yes()">Yes</button>
+        <button onclick="yes()">Si</button>
         <button onclick="no()">No</button>
     </div>
     
@@ -47,13 +47,23 @@
         <h1>Por que no D: ??????</h1>
         <img src="images/sadcat1.jpg" alt="Sad image" width="300">
         <br>
-        <button onclick="why()">Why?</button>
+        <button onclick="yes()">Si</button>
+        <button onclick="no2()">Nop</button>
+    </div>
+
+    <div class="container" id="noPage2" style="display: none;">
+        <h1>Por favor?</h1>
+        <img src="images/sadcat2.jpg" alt="Sad image" width="300">
+        <br>
+        <button onclick="yes()">Sipi</button>
+        <button onclick="why()">Nopi</button>
     </div>
     
     <div class="container" id="whyPage" style="display: none;">
-        <h1>Please?</h1>
+        <h1>Por favor?</h1>
         <br>
-        <button onclick="areYouSure()">Are you sure?</button>
+        <img src="bruhcat.gif" alt="Sad image" width="300">
+        <button onclick="areYouSure()">Hay q intentar de nuevo :P</button>
     </div>
     
     <script>
@@ -65,8 +75,12 @@
             document.getElementById("main").style.display = "none";
             document.getElementById("noPage").style.display = "block";
         }
-        function why() {
+        function no2() {
             document.getElementById("noPage").style.display = "none";
+            document.getElementById("noPage2").style.display = "block";
+        }
+        function why() {
+            document.getElementById("noPage2").style.display = "none";
             document.getElementById("whyPage").style.display = "block";
         }
         function areYouSure() {
